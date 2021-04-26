@@ -1,0 +1,12 @@
+[package]
+name = "thsw"
+version = "0.1.0"
+description = "Simple application to run any command on sunrise or sunset."
+authors = ["yevhen <yevhen.krasnokutsky@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+license-file = "LICENSE"
+
+[dependencies]
+configparser = "2.0.1"
+chrono = "0.4.19"

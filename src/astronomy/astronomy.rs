@@ -1,4 +1,5 @@
 use chrono::{Local, NaiveTime};
+use std::cmp::min;
 
 #[derive(Copy, Clone, Debug)]
 pub struct Astronomy {
@@ -122,6 +123,7 @@ impl Astronomy {
         let seconds = (day_part * 3600.0 * 24.0).round();
         let hours = (seconds / 3600.0).floor();
         let minutes = ((seconds / 3600.0 - hours) * 60.0).round();
+        let minutes = min(minutes as u32, 59);
         NaiveTime::from_hms(hours as u32, minutes as u32, 0)
     }
 }
